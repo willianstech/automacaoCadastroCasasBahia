@@ -21,13 +21,10 @@ public class TelaCadastro {
 	ChromeDriver browser = new ChromeDriver();
 
 	@When("^inserir meus dados$")
-	public void inserir_meus_dados() throws Throwable {
-		Robot robot = new Robot();
-
-		// REALIZAR VALIDAÇÃO DE ELEMENTO "IDENTIFICAÇÃO"
-//		WebElement mensagemEmail = browser.findElement(By.className("entrar-formError --zeroLeft"));
-//		assertEquals("E-mail ou senha incorretos", mensagemEmail.getText());
-
+	public void inserir_meus_dados() throws Throwable {		
+	
+		browser.findElement(By.id("rbNaoCadastrado")).click();
+		browser.findElement(By.id("btnClienteCadastrar")).click();
 		browser.findElement(By.id("NomeCompleto")).sendKeys("Aaaa aaa");
 		browser.findElement(By.id("Cpf")).sendKeys("82608098932");
 		browser.findElement(By.id("Telefone1DDDPF")).sendKeys("11");
@@ -37,9 +34,6 @@ public class TelaCadastro {
 		browser.findElement(By.id("DataNascimentoAno")).sendKeys("1111");
 		browser.findElement(By.id("Sexo")).click();
 		browser.findElement(By.id("Email")).sendKeys("11111@111.11");
-		/*
-		 * robot.keyPress(KeyEvent.VK_TAB); browser.findElementByName("")
-		 */
 		browser.findElement(By.id("ReceberAvisoEmail")).click();
 		browser.findElement(By.id("ReceberAvisoSms")).click();
 		browser.findElement(By.id("btnClienteSalvarComCaptcha")).click();
@@ -69,6 +63,12 @@ public class TelaCadastro {
 
 	@When("^inserir meus dados incorretos$")
 	public void inserir_meus_dados_incorretos() throws Throwable {
+
+		browser.findElement(By.id("Email")).sendKeys("11111@111.11");
+		
+		browser.findElement(By.id("rbNaoCadastrado")).click();
+		browser.findElement(By.id("btnClienteLogin")).click();
+
 		browser.findElement(By.id("NomeCompleto")).sendKeys("Aaaaa aaaa");
 		browser.findElement(By.id("Cpf")).sendKeys("82608098932");
 		browser.findElement(By.id("Telefone1DDDPF")).sendKeys("11");
@@ -78,9 +78,7 @@ public class TelaCadastro {
 		browser.findElement(By.id("DataNascimentoAno")).sendKeys("1111");
 		browser.findElement(By.id("Sexo")).click();
 		browser.findElement(By.id("Email")).sendKeys("11111@111.11");
-		/*
-		 * robot.keyPress(KeyEvent.VK_TAB); browser.findElementByName("")
-		 */
+	
 		browser.findElement(By.id("ReceberAvisoEmail")).click();
 		browser.findElement(By.id("ReceberAvisoSms")).click();
 		browser.findElement(By.id("btnClienteSalvarComCaptcha")).click();

@@ -1,22 +1,24 @@
 package Testes;
 
 import org.junit.Test;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import Funcoes.Cadastro;
 import Funcoes.Inicial;
 import net.bytebuddy.implementation.bind.annotation.RuntimeType;
 
-public class CTAcessarPagina {
+public class CTPositivo {
 	Inicial inicial = new Inicial();
 	Cadastro cadastro = new Cadastro();
+	ChromeDriver browser = new ChromeDriver();
 
-	
 	@Test
-	
-	
 	public void sysout() throws Throwable {
-		System.out.println("Teste.123");
+		System.out.println("teste");
+
 		inicial.acessarPaginaInicial();
 		cadastro.inserirDadosPaginaCadastro();
+
+		browser.close();
 	}
 }
