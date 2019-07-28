@@ -7,15 +7,15 @@ import Telas.TelaCadastro;
 
 public class Cadastro extends TelaCadastro {
 
-	//Positivo
+	// Positivo
 	public void inserirDadosPaginaCadastro() throws Throwable {
 		inserir_meus_dados();
 		clicar_em_Continuar();
-		ira_aparecer_a_informacao_Ola_Nome();	
-	}	
-	
-	//Negativo
-	public void inserirDadosIncorretos() throws Throwable {		
+		ira_aparecer_a_informacao_Ola_Nome();
+	}
+
+	// Negativo
+	public void inserirDadosIncorretos() throws Throwable {
 		inserir_meus_dados_incorretos();
 		ira_aparecer_a_mensagem_E_mail_ou_senha_incorretos();
 	}

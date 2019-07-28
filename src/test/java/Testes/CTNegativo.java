@@ -14,7 +14,7 @@ public class CTNegativo {
 	@Test
 	
 	public void sysout() throws Throwable {
-		System.out.println("teste");
+		System.out.println("Teste Negativo");
 		inicial.acessarPaginaInicial();
 		cadastro.inserirDadosIncorretos();	
 		

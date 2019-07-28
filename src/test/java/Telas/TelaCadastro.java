@@ -19,7 +19,7 @@ import cucumber.api.java.en.When;
 public class TelaCadastro {
 
 	ChromeDriver browser = new ChromeDriver();
-
+	
 	@When("^inserir meus dados$")
 	public void inserir_meus_dados() throws Throwable {		
 	
@@ -63,9 +63,7 @@ public class TelaCadastro {
 
 	@When("^inserir meus dados incorretos$")
 	public void inserir_meus_dados_incorretos() throws Throwable {
-
-		browser.findElement(By.id("Email")).sendKeys("11111@111.11");
-		
+				
 		browser.findElement(By.id("rbNaoCadastrado")).click();
 		browser.findElement(By.id("btnClienteLogin")).click();
 
@@ -77,8 +75,7 @@ public class TelaCadastro {
 		browser.findElement(By.id("DataNascimentoMes")).sendKeys("11");
 		browser.findElement(By.id("DataNascimentoAno")).sendKeys("1111");
 		browser.findElement(By.id("Sexo")).click();
-		browser.findElement(By.id("Email")).sendKeys("11111@111.11");
-	
+		browser.findElement(By.id("Email")).sendKeys("11111@111.11");	
 		browser.findElement(By.id("ReceberAvisoEmail")).click();
 		browser.findElement(By.id("ReceberAvisoSms")).click();
 		browser.findElement(By.id("btnClienteSalvarComCaptcha")).click();
@@ -99,5 +96,4 @@ public class TelaCadastro {
 			i++;
 		}
 	}
-
 }

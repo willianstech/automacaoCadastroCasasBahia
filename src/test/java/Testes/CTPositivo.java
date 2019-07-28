@@ -14,8 +14,8 @@ public class CTPositivo {
 
 	@Test
 	public void sysout() throws Throwable {
-		System.out.println("teste");
-
+		System.out.println("Teste Positivo");		
+		
 		inicial.acessarPaginaInicial();
 		cadastro.inserirDadosPaginaCadastro();
 
