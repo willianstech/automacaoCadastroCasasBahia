@@ -30,7 +30,8 @@ public class TelaInicial {
 	}
 	
 	@When("^acessar a pagina de cadastro$")
-	public void acessar_a_pagina_de_cadastro() throws Throwable { // WebDriver browser = null;
+	public void acessar_a_pagina_de_cadastro() throws Throwable { 
+	   
 		Actions actions = new Actions(browser);
 		WebElement minhaConta = browser.findElement(By.id("MenuWelcomeDeslogado"));
 		actions.moveToElement(minhaConta).pause(2000);

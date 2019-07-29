@@ -12,7 +12,7 @@ public class CTPositivo {
 	Cadastro cadastro = new Cadastro();
 	ChromeDriver browser = new ChromeDriver();
 
-	@Test
+	@Test(alwaysRun = true)
 	public void sysout() throws Throwable {
 		System.out.println("Teste Positivo");		
 		
